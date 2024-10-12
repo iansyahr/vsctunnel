@@ -43,9 +43,9 @@ def auth_account(provider):
                         auth_url = url_match.group(1)
                         print(f"Authentication URL: {auth_url}")
                 if not auth_code:
-                    code_match = re.search(r"code ([A-Z0-9]+)", line)
+                    code_match = line.split("code ")
                     if code_match:
-                        auth_code = code_match.group(1)
+                        auth_code = code_match[1]
                         print(f"Authentication Code: {auth_code}")
 
         if auth_url and auth_code:
