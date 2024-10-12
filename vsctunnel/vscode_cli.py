@@ -62,8 +62,8 @@ def run(machine_name = "janedoe"):
     subprocess.run(['rm','vscode-log.txt'])
     with open('vscode-log.txt', 'w') as f:
         subprocess.Popen(['code','tunnel','--name',machine_name], stdout=f, stderr=subprocess.STDOUT)
-    return 'The VS Code CLI Server has been successfully started. The tunnel link is available in vscode-log.txt'
+    return "The VS Code CLI Server has been successfully started. The tunnel link is available in vscode-log.txt"
 
 def kill():
     subprocess.run(['pkill', 'code'])
-    return 'VS Code has been terminated.'
+    return "VS Code has been terminated."
