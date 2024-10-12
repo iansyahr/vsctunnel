@@ -10,7 +10,7 @@ setup(
     url="https://github.com/iansyahr/vsctunnel",
     author="Muhamad Apriansyah Ramadhan",
     author_email="secret@example.com",
-    install_requires=[],
+    install_requires=["fastnanoid"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",

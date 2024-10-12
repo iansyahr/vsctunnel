@@ -1,3 +1,4 @@
+from fastnanoid import generate
 import subprocess
 import os
 import time
@@ -57,7 +58,7 @@ def auth_account(provider):
         return "Login Successful"
     return "Login Failed"
 
-def run(machine_name = "janedoe"):
+def run(machine_name = generate(size = 12)):
     subprocess.run(['pkill', 'code'])
     subprocess.run(['rm','vscode-log.txt'])
     with open('vscode-log.txt', 'w') as f:
