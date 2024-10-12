@@ -6,7 +6,7 @@ def install_binary():
     try:
         subprocess.run(["code", "--version"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         print("VSCode CLI sudah terinstall.")
-    except subprocess.CalledProcessError:
+    except (subprocess.CalledProcessError, FileNotFoundError):
         print("VSCode CLI belum terinstall")
         print("Kami menginstall programnya terlebih dahulu")
 
