@@ -11,9 +11,9 @@ def install_binary():
     except (subprocess.CalledProcessError, FileNotFoundError):
         print("VSCode CLI is not installed")
         print("Install VSCode CLI...")
-
-        os.system("curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' --output vscode_cli.tar.gz")
-        os.system("tar -xf vscode_cli.tar.gz")
+        # https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64
+        os.system("wget https://vscode.download.prss.microsoft.com/dbazure/download/stable/384ff7382de624fb94dbaf6da11977bba1ecd427/vscode_cli_alpine_x64_cli.tar.gz")
+        os.system("tar -xf vscode_cli_alpine_x64_cli.tar.gz")
         os.environ['PATH'] += ":/content/"
         
         print("Installation process complete.")
